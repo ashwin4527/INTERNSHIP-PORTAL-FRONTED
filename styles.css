@@ -1,0 +1,33 @@
+:root{--bg:#eef2f5;--ink:#14213d;--muted:#5b6678;--line:#d3dbe4;--card:#fff;--accent:#0b7a75;--err:#b42318;--ok:#0b6b3a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Segoe UI",system-ui,sans-serif}
+.top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem;padding:.9rem 1.5rem;background:var(--ink);color:#fff}
+.top h1{font-size:1.25rem;margin:0}
+nav{display:flex;gap:.4rem}
+nav button{background:transparent;color:#fff;border-color:#ffffff55}
+nav button.on{background:#fff;color:var(--ink)}
+main{max-width:1080px;margin:1.5rem auto;padding:0 1rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:1.1rem;margin-bottom:1rem}
+.auth{max-width:380px;margin:2rem auto}
+label{display:block;margin:.6rem 0;font-size:.9rem;color:var(--muted)}
+input,select{width:100%;padding:.55rem .65rem;border:1px solid var(--line);border-radius:6px;font:inherit;color:var(--ink);margin-top:.2rem}
+.check{display:flex;gap:.5rem;align-items:center}.check input{width:auto;margin:0}
+button{padding:.5rem .9rem;border:1px solid var(--line);border-radius:6px;background:#fff;font:inherit;cursor:pointer;color:var(--ink)}
+button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+button.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+button.danger{color:var(--err);border-color:var(--err)}
+button:disabled{opacity:.6;cursor:wait}
+a{color:var(--accent)}
+.filters{display:grid;grid-template-columns:2fr 1fr 1fr 1fr auto auto;gap:.6rem;align-items:center}
+.filters input,.filters select{margin:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1rem}
+.item h3{margin:0 0 .2rem}.item p{margin:.35rem 0}
+.company{color:var(--muted)}
+.tags span{display:inline-block;margin:0 .35rem .35rem 0;padding:.1rem .55rem;border-radius:99px;background:#dff1ef;color:#075a56;font-size:.82rem}
+.row{display:flex;gap:.5rem;margin-top:.7rem}
+.banner{padding:.7rem 1rem;border-radius:6px;margin-bottom:1rem;cursor:pointer;border:1px solid}
+.banner.ok{background:#e6f5ec;color:var(--ok);border-color:#b7e1c8}
+.banner.err{background:#fdeceb;color:var(--err);border-color:#f3c0bc}
+.center{text-align:center;padding:2rem}.muted{color:var(--muted)}
+dl{display:grid;grid-template-columns:100px 1fr;gap:.4rem}dt{color:var(--muted)}dd{margin:0}
+@media(max-width:800px){.filters{grid-template-columns:1fr}}
